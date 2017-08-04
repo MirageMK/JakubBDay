@@ -15,19 +15,186 @@
     <script>
         $(document).ready(function() {
             $("button").button();
+            // Get the modal
+            var modal = $('#myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+            $("li").click(function() {
+                modal.show();
+                console.log(this);
+                $("#img01").attr("src", $(this).attr("src"));
+                $("#caption").html($(this).attr("alt"));
+            });
+
+// When the user clicks on <span> (x), close the modal
+            $(".close").click(function() {
+                modal.hide();
+            });
         });
+
+        function ImagetoPrint(source) {
+            return "<html><head><style type='text/css' media='print'>"+
+            "@page { size: landscape; }"+
+            "</style><script>function step1(){\n" +
+                "setTimeout('step2()', 10);}\n" +
+                "function step2(){window.print();window.close()}\n" +
+                "</scri" + "pt></head><body onload='step1()'>\n" +
+                "<img src='" + source + "' /></body></html>";
+        }
+        function PrintImage(source) {
+            Pagelink = "about:blank";
+            var pwa = window.open(Pagelink, "_new");
+            pwa.document.open();
+            pwa.document.write(ImagetoPrint(source));
+            pwa.document.close();
+        }
     </script>
+    <style>
+        /* Style the Image Used to Trigger the Modal */
+        li {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {opacity: 0.7;}
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        /* Modal Content (Image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image (Image Text) - Same Width as the Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+        .modal-content, #caption { 
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(0)} 
+            to {-webkit-transform:scale(1)}
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <img src="puzzle.png" />
+<img style="width: calc(100% - 100px); horiz-align: center" src="puzzle.png" />
+<br/>
+<button onclick="PrintImage('puzzle.png'); return false;">Print</button>
 <ol>
-    <li>Question</li>
-    <li>Question</li>
-    <li>Question</li>
-    <li>Question</li>
-    <li>Question</li>
-    <li>Question</li>
+    <li src="https://cf.geekdo-images.com/images/pic438847_lg.jpg" alt="Zerg Rush!">Zerg Rush!</li>
+    <li src="https://cf.geekdo-images.com/images/pic1595066_lg.jpg" alt="Attack!">Attack!</li>
+    <li src="https://cf.geekdo-images.com/images/pic56604_lg.jpg" alt="The game with the hockey puck.">The game with the hockey puck.</li>
+    <li src="https://cf.geekdo-images.com/images/pic105293.jpg" alt="Just one more into the castillo.">Just one more into the castillo.</li>
+    <li src="https://cf.geekdo-images.com/images/pic244247_lg.jpg" alt="What harm will one little catapult do?">What harm will one little catapult do?</li>
+    <li src="https://cf.geekdo-images.com/images/pic459592_lg.jpg" alt="It's the love hut!">It's the love hut!</li>
+    <li src="https://cf.geekdo-images.com/images/pic795204_lg.jpg" alt="Do you have exact change?">Do you have exact change?</li>
+    <li src="https://cf.geekdo-images.com/images/pic713875_lg.jpg" alt="When do you usually get up in the morning?">When do you usually get up in the morning?</li>
+    <li src="https://cf.geekdo-images.com/images/pic1178855_lg.jpg" alt="What's the worst that could happen?">What's the worst that could happen?</li>
+    <li src="https://cf.geekdo-images.com/images/pic258478.jpg" alt="Just one more Elephant!">Just one more Elephant!</li>
+    <li src="https://cf.geekdo-images.com/images/pic1851467_lg.jpg" alt="Cyberbunny rules!">Cyberbunny rules!</li>
+    <li src="https://cf.geekdo-images.com/images/pic727780.jpg" alt="Always take the queen!">Always take the queen!</li>
+    <li src="https://cf.geekdo-images.com/images/pic406747_lg.jpg" alt="Big money strategy?">Big money strategy?</li>
+    <li src="https://cf.geekdo-images.com/images/pic1075193_lg.jpg" alt="You can't play cards against humanity when kids are around.">You can't play cards against humanity when kids are around.</li>
+    <li src="https://cf.geekdo-images.com/images/pic973020.jpg" alt="Please, not the sea serpent.">Please, not the sea serpent.</li>
+    <li src="https://cf.geekdo-images.com/images/pic93199_lg.jpg" alt="Colonists... sure.">Colonists... sure.</li>
+    <li src="https://cf.geekdo-images.com/images/pic2036593_lg.jpg" alt="Keep your hands off my casino!">Keep your hands off my casino!</li>
+    <li src="https://cf.geekdo-images.com/images/pic1019800_lg.jpg" alt="You are a Cylon.">You are a Cylon.</li>
+    <li src="https://cf.geekdo-images.com/images/pic620028_lg.jpg" alt="Careful with the DEFCON!">Careful with the DEFCON!</li>
+    <li src="https://cf.geekdo-images.com/images/pic1366041_md.jpg" alt="Orange cubes? You lack imagination.">Orange cubes? You lack imagination.</li>
+    <li src="https://cf.geekdo-images.com/images/pic1805928.jpg" alt="I'm sure we have time to grab that loot.">I'm sure we have time to grab that loot.</li>
+    <li src="https://cf.geekdo-images.com/images/pic1100134_lg.jpg" alt="Who needs dice anyway?">Who needs dice anyway?</li>
+    <li src="https://cf.geekdo-images.com/images/pic434482_lg.jpg" alt="Who took all the lasers?">Who took all the lasers?</li>
+    <li src="https://cf.geekdo-images.com/images/pic1021253.jpg" alt="It's not that long! Cough, Cough!">It's not that long! Cough, Cough!</li>
+    <li src="https://cf.geekdo-images.com/images/pic292530_lg.jpg" alt="Military or Production?">Military or Production?</li>
+    <li src="https://cf.geekdo-images.com/images/pic1755785_lg.jpg" alt="Let's involve the natives.">Let's involve the natives.</li>
+    <li src="https://cf.geekdo-images.com/images/pic1701147_lg.jpg" alt="I'm sure I can take this city alone.">I'm sure I can take this city alone.</li>
+    <li src="https://cf.geekdo-images.com/images/pic1098935_lg.png" alt="Please don't draw an epidemic.">Please don't draw an epidemic.</li>
+    <li src="https://cf.geekdo-images.com/images/pic247550_lg.jpg" alt="Wood for my Sheep?">Wood for my Sheep?</li>
+    <li src="https://cf.geekdo-images.com/images/pic1248506_lg.jpg" alt="Me... preparing for war?">Me... preparing for war?</li>
+    <li src="https://cf.geekdo-images.com/images/pic927815_lg.jpg" alt="Beware the arachnids!">Beware the arachnids!</li>
+    <li src="https://cf.geekdo-images.com/images/pic178686_md.jpg" alt="But it seems so easy.">But it seems so easy.</li>
+    <li src="https://cf.geekdo-images.com/images/pic909801_lg.jpg" alt="I'll just buy all the cheap garbage!">I'll just buy all the cheap garbage!</li>
+    <li src="https://cf.geekdo-images.com/images/pic1365444.jpg" alt="This is a yellow card.">This is a yellow card.</li>
+    <li src="https://cf.geekdo-images.com/images/pic1096936_lg.jpg" alt="All mine!">All mine!</li>
+    <li src="https://cf.geekdo-images.com/images/pic1515094_lg.jpg" alt="Dig Dig Dig...">Dig Dig Dig...</li>
+    <li src="https://cf.geekdo-images.com/images/pic475895_lg.jpg" alt="Animeeples">Animeeples</li>
+    <li src="https://cf.geekdo-images.com/images/pic2465327_lg.jpg" alt="Sabotage? Who me?">Sabotage? Who me?</li>
+    <li src="https://cf.geekdo-images.com/images/pic535127_lg.jpg" alt="Who said the art is weird?">Who said the art is weird?</li>
+    <li src="https://cf.geekdo-images.com/images/pic1574282_lg.jpg" alt="Look a those dice!">Look a those dice!</li>
 </ol>
-<button>NEXT</button>
+    
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+</div>
 </body>
 </html>
