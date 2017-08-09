@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Happy Birthday</title>
+    <title>Happy Birthday Jakub!!!</title>
     <script
         src="http://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -53,7 +53,7 @@
     <style>
         
          body {
-             background-image: url("jakub.jpg");
+             /*background-image: url("jakub.jpg");*/
              opacity: 0.8;
          }
 
@@ -72,10 +72,11 @@
         }
 
         .title {
-            background-color: aquamarine;
-            color: blueviolet;
-            position: center;
-            size: A1
+            background-color: lightseagreen;
+            color: khaki;
+            text-align: center;
+            font-size: 50px;
+            font-family: Comic Sans MS;
                
         }
 
@@ -97,10 +98,121 @@
             background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
         }
 
-        .purple {
-            
-        }
+        ol li div, .first {
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+}
 
+
+                ol li div, .firstcaption {
+  width: 100%;
+  height: 100%;
+  background-color: burlywood;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+  font-size: 30px;
+}
+                ol li div, .second {
+  width: 100%;
+  height: 100%;
+  background-color: darkkhaki;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+
+                ol li div, .secondcaption {
+  width: 100%;
+  height: 100%;
+  background-color: olivedrab;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+  font-size: 30px;
+}
+
+                                ol li div, .thirdcaption {
+  width: 100%;
+  height: 100%;
+  background-color: lightcoral;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+  font-size: 30px;
+}
+
+                  ol li div, .third {
+  width: 100%;
+  height: 100%;
+  background-color: darksalmon;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+
+                  ol li div, .fourth {
+  width: 100%;
+  height: 100%;
+  background-color: powderblue;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+
+ ol li div, .fourthcaption {
+  width: 100%;
+  height: 100%;
+  background-color: darkcyan;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+  font-size: 30px;
+}
+
+                                    ol li div, .fifth {
+  width: 100%;
+  height: 100%;
+  background-color: cadetblue;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+
+
+ ol li div, .fifthcaption {
+  width: 100%;
+  height: 100%;
+  background-color: darkslateblue;
+  margin-left: -20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  text-align: center;
+  font-size: 30px;
+}
         /* Modal Content (Image) */
         .modal-content {
             margin: auto;
@@ -120,6 +232,18 @@
             padding: 10px 0;
             height: 150px;
         }
+
+        ol.split { list-style-type: none; }
+    ol.split li:before
+    {
+      counter-increment: mycounter;
+      content: counter(mycounter) ".\00A0\00A0";
+    }
+    ol.split li
+    {
+      text-indent: -1.3em;
+    }
+    ol.start { counter-reset: mycounter; }
 
         /* Add Animation - Zoom in the Modal */
         .modal-content, #caption { 
@@ -150,6 +274,10 @@
             transition: 0.3s;
         }
 
+        .solveme {
+            align-items: right
+        }
+
         .close:hover,
         .close:focus {
             color: #bbb;
@@ -166,19 +294,18 @@
     </style>
 </head>
 <body>
-<p class="title">
-
-    Welcome to
-    "Fun with board games"
-</p>
+    <p class="title">
+            Welcome to
+            "Fun with board games"
+    </p>
 <img style="width: calc(100% - 100px); horiz-align: center" src="puzzle.png" />
 <br/>
 <script>
 // Set the date we're counting down to
     var countDownDate1 = new Date("Aug 06, 2017 09:00:00").getTime();
     var countDownDate2 = new Date("Aug 07, 2017 09:00:00").getTime();
-    var countDownDate3 = new Date("Aug 17, 2017 09:00:00").getTime();
-    var countDownDate4 = new Date("Aug 18, 2017 09:00:00").getTime();
+    var countDownDate3 = new Date("Aug 08, 2017 09:00:00").getTime();
+    var countDownDate4 = new Date("Aug 08, 2017 09:00:00").getTime();
 
 // Update the count down every 1 second
     var x = setInterval(function() {
@@ -295,88 +422,95 @@
 
    
 </script>
-<p class="title">
 <button onclick="PrintImage('puzzle.png'); return false;">Print</button>
+<button id="button" class="solveme"><a href="solveme.html">Did you solve me? </a></button>
     <ul>
         <li>
-            <p>Challenge 1</p>
+            <p class="firstcaption">Challenge 1</p>
         </li>
     </ul>
-<ol>
-    <li id="1" src="https://cf.geekdo-images.com/images/pic438847_lg.jpg" alt="Zerg Rush!">Zerg Rush!</l i>
-    <li id="2" src="https://cf.geekdo-images.com/images/pic1595066_lg.jpg" alt="Attack!">Attack!</li>
-    <li id="3" src="https://cf.geekdo-images.com/images/pic56604_lg.jpg" alt="The game with the hockey puck.">The game with the hockey puck.</li>
-    <li id="4" src="https://cf.geekdo-images.com/images/pic105293.jpg" alt="Just one more into the castillo.">Just one more into the castillo.</li>
-    <li id="5" src="https://cf.geekdo-images.com/images/pic244247_lg.jpg" alt="What harm will one little catapult do?">What harm will one little catapult do?</li>
-    <li id="6" src="https://cf.geekdo-images.com/images/pic459592_lg.jpg" alt="It's the love hut!">It's the love hut!</li>
-    <li id="7" src="https://cf.geekdo-images.com/images/pic795204_lg.jpg" alt="Do you have exact change?">Do you have exact change?</li>
-    <li id="8" src="https://cf.geekdo-images.com/images/pic713875_lg.jpg" alt="When do you usually get up in the morning?">When do you usually get up in the morning?</li>
+<ol class="split start">
+    <li id="1" src="https://cf.geekdo-images.com/images/pic438847_lg.jpg" alt="Zerg Rush!"><div class="first">Zerg Rush!</div></li>
+    <li id="2" src="https://cf.geekdo-images.com/images/pic1595066_lg.jpg" alt="Attack!"><div class="first">Attack!</div></li>
+    <li id="3" src="https://cf.geekdo-images.com/images/pic56604_lg.jpg" alt="The game with the hockey puck."><div class="first">The game with the hockey puck.</div></li>
+    <li id="4" src="https://cf.geekdo-images.com/images/pic105293.jpg" alt="Just one more into the castillo."><div class="first">Just one more into the castillo.</div></li>
+    <li id="5" src="https://cf.geekdo-images.com/images/pic244247_lg.jpg" alt="What harm will one little catapult do?"><div class="first">What harm will one little catapult do?</div></li>
+    <li id="6" src="https://cf.geekdo-images.com/images/pic459592_lg.jpg" alt="It's the love hut!"><div class="first">It's the love hut!</div></li>
+    <li id="7" src="https://cf.geekdo-images.com/images/pic795204_lg.jpg" alt="Do you have exact change?"><div class="first">Do you have exact change?</div></li>
+    <li id="8" src="https://cf.geekdo-images.com/images/pic713875_lg.jpg" alt="When do you usually get up in the morning?"><div class="first">When do you usually get up in the morning?</div></li>
 </ol>   
 <ul>
     <li>
+        <div class="secondcaption">
         <p>Come back in: </p>
         <p id="day1"></p>
+        </div>
     </li>
 </ul>
-    <ol>
-        <li id="9" class="hide" src="https://cf.geekdo-images.com/images/pic1178855_lg.jpg" alt="What's the worst that could happen?">What's the worst that could happen?</li>
-        <li id="10" class="hide" src="https://cf.geekdo-images.com/images/pic258478.jpg" alt="Just one more Elephant!">Just one more Elephant!</li>
-        <li id="11" class="hide" src="https://cf.geekdo-images.com/images/pic1851467_lg.jpg" alt="Cyberbunny rules!">Cyberbunny rules!</li>
-        <li id="12" class="hide" src="https://cf.geekdo-images.com/images/pic727780.jpg" alt="Always take the queen!">Always take the queen!</li>
-        <li id="13" class="hide" src="https://cf.geekdo-images.com/images/pic406747_lg.jpg" alt="Big money strategy?">Big money strategy?</li>
-        <li id="14" class="hide" src="https://cf.geekdo-images.com/images/pic1075193_lg.jpg" alt="You can't play cards against humanity when kids are around.">You can't play cards against humanity when kids are around.</li>
-        <li id="15" class="hide" src="https://cf.geekdo-images.com/images/pic973020.jpg" alt="Please, not the sea serpent.">Please, not the sea serpent.</li>
-        <li id="16" class="hide" src="https://cf.geekdo-images.com/images/pic93199_lg.jpg" alt="Colonists... sure.">Colonists... sure.</li>
+    <ol class="split">
+        <li id="9" class="hide" src="https://cf.geekdo-images.com/images/pic1178855_lg.jpg" alt="What's the worst that could happen?"><div class="second">What's the worst that could happen?</div></li>
+        <li id="10" class="hide" src="https://cf.geekdo-images.com/images/pic258478.jpg" alt="Just one more Elephant!"><div class="second">Just one more Elephant!</div></li>
+        <li id="11" class="hide" src="https://cf.geekdo-images.com/images/pic1851467_lg.jpg" alt="Cyberbunny rules!"><div class="second">Cyberbunny rules!</div></li>
+        <li id="12" class="hide" src="https://cf.geekdo-images.com/images/pic727780.jpg" alt="Always take the queen!"><div class="second">Always take the queen!</div></li>
+        <li id="13" class="hide" src="https://cf.geekdo-images.com/images/pic406747_lg.jpg" alt="Big money strategy?"><div class="second">Big money strategy?</div></li>
+        <li id="14" class="hide" src="https://cf.geekdo-images.com/images/pic1075193_lg.jpg" alt="You can't play cards against humanity when kids are around."><div class="second">You can't play cards against humanity when kids are around.</div></li>
+        <li id="15" class="hide" src="https://cf.geekdo-images.com/images/pic973020.jpg" alt="Please, not the sea serpent."><div class="second">Please, not the sea serpent.</div></li>
+        <li id="16" class="hide" src="https://cf.geekdo-images.com/images/pic93199_lg.jpg" alt="Colonists... sure."><div class="second">Colonists... sure.</div></li>
     </ol>
     <ul>
         <li>
-            <p>Come back in: </p>
-            <p id="day2"></p>
+            <div class="thirdcaption">
+                <p>Come back in: </p>
+                <p id="day2"></p>
+            </div>
         </li>
     </ul>
-    <ol>
-        <li id="17" class="hide" src="https://cf.geekdo-images.com/images/pic2036593_lg.jpg" alt="Keep your hands off my casino!">Keep your hands off my casino!</li>
-        <li id="18" class="hide" src="https://cf.geekdo-images.com/images/pic1019800_lg.jpg" alt="You are a Cylon.">You are a Cylon.</li>
-        <li id="19" class="hide" src="https://cf.geekdo-images.com/images/pic620028_lg.jpg" alt="Careful with the DEFCON!">Careful with the DEFCON!</li>
-        <li id="20" class="hide" src="https://cf.geekdo-images.com/images/pic1366041_md.jpg" alt="Orange cubes? You lack imagination.">Orange cubes? You lack imagination.</li>
-        <li id="21" class="hide" src="https://cf.geekdo-images.com/images/pic1805928.jpg" alt="I'm sure we have time to grab that loot.">I'm sure we have time to grab that loot.</li>
-        <li id="22" class="hide" src="https://cf.geekdo-images.com/images/pic1100134_lg.jpg" alt="Who needs dice anyway?">Who needs dice anyway?</li>
-        <li id="23" class="hide" src="https://cf.geekdo-images.com/images/pic434482_lg.jpg" alt="Who took all the lasers?">Who took all the lasers?</li>
-        <li id="24" class="hide" src="https://cf.geekdo-images.com/images/pic1021253.jpg" alt="It's not that long! Cough, Cough!">It's not that long! Cough, Cough!</li>
+    <ol class="split">
+        <li id="17" class="hide" src="https://cf.geekdo-images.com/images/pic2036593_lg.jpg" alt="Keep your hands off my casino!"><div class="third">Keep your hands off my casino!</div></li>
+        <li id="18" class="hide" src="https://cf.geekdo-images.com/images/pic1019800_lg.jpg" alt="You are a Cylon."><div class="third">You are a Cylon.</div></li>
+        <li id="19" class="hide" src="https://cf.geekdo-images.com/images/pic620028_lg.jpg" alt="Careful with the DEFCON!"><div class="third">Careful with the DEFCON!</div></li>
+        <li id="20" class="hide" src="https://cf.geekdo-images.com/images/pic1366041_md.jpg" alt="Orange cubes? You lack imagination."><div class="third">Orange cubes? You lack imagination.</div></li>
+        <li id="21" class="hide" src="https://cf.geekdo-images.com/images/pic1805928.jpg" alt="I'm sure we have time to grab that loot."><div class="third">I'm sure we have time to grab that loot.</div></li>
+        <li id="22" class="hide" src="https://cf.geekdo-images.com/images/pic1100134_lg.jpg" alt="Who needs dice anyway?"><div class="third">Who needs dice anyway?</div></li>
+        <li id="23" class="hide" src="https://cf.geekdo-images.com/images/pic434482_lg.jpg" alt="Who took all the lasers?"><div class="third">Who took all the lasers?</div></li>
+        <li id="24" class="hide" src="https://cf.geekdo-images.com/images/pic1021253.jpg" alt="It's not that long! Cough, Cough!"><div class="third">It's not that long! Cough, Cough!</div></li>
     </ol>
     <ul>
         <li>
-            <p>Come back in: </p>
+            <div class="fourthcaption">
+                <p>Come back in: </p>
             <p id="day3"></p>
-        </li>
+            </div>
+</li>
     </ul>
-    <ol>
-        <li id="25" class="hide" src="https://cf.geekdo-images.com/images/pic292530_lg.jpg" alt="Military or Production?">Military or Production?</li>
-        <li id="26" class="hide" src="https://cf.geekdo-images.com/images/pic1755785_lg.jpg" alt="Let's involve the natives.">Let's involve the natives.</li>
-        <li id="27" class="hide" src="https://cf.geekdo-images.com/images/pic1701147_lg.jpg" alt="I'm sure I can take this city alone.">I'm sure I can take this city alone.</li>
-        <li id="28" class="hide" src="https://cf.geekdo-images.com/images/pic1098935_lg.png" alt="Please don't draw an epidemic.">Please don't draw an epidemic.</li>
-        <li id="29" class="hide" src="https://cf.geekdo-images.com/images/pic247550_lg.jpg" alt="Wood for my Sheep?">Wood for my Sheep?</li>
-        <li id="30" class="hide" src="https://cf.geekdo-images.com/images/pic1248506_lg.jpg" alt="Me... preparing for war?">Me... preparing for war?</li>
-        <li id="31" class="hide" src="https://cf.geekdo-images.com/images/pic927815_lg.jpg" alt="Beware the arachnids!">Beware the arachnids!</li>
-        <li id="32" class="hide" src="https://cf.geekdo-images.com/images/pic178686_md.jpg" alt="But it seems so easy.">But it seems so easy.</li>
+    <ol class="split">
+        <li id="25" class="hide" src="https://cf.geekdo-images.com/images/pic292530_lg.jpg" alt="Military or Production?"><div class="fourth">Military or Production?</div></li>
+        <li id="26" class="hide" src="https://cf.geekdo-images.com/images/pic1755785_lg.jpg" alt="Let's involve the natives."><div class="fourth">Let's involve the natives.</div></li>
+        <li id="27" class="hide" src="https://cf.geekdo-images.com/images/pic1701147_lg.jpg" alt="I'm sure I can take this city alone."><div class="fourth">I'm sure I can take this city alone.</div></li>
+        <li id="28" class="hide" src="https://cf.geekdo-images.com/images/pic1098935_lg.png" alt="Please don't draw an epidemic."><div class="fourth">Please don't draw an epidemic.</div></li>
+        <li id="29" class="hide" src="https://cf.geekdo-images.com/images/pic247550_lg.jpg" alt="Wood for my Sheep?"><div class="fourth">Wood for my Sheep?</div></li>
+        <li id="30" class="hide" src="https://cf.geekdo-images.com/images/pic1248506_lg.jpg" alt="Me... preparing for war?"><div class="fourth">Me... preparing for war?</div></li>
+        <li id="31" class="hide" src="https://cf.geekdo-images.com/images/pic927815_lg.jpg" alt="Beware the arachnids!"><div class="fourth">Beware the arachnids!</div></li>
+        <li id="32" class="hide" src="https://cf.geekdo-images.com/images/pic178686_md.jpg" alt="But it seems so easy."><div class="fourth">But it seems so easy.</div></li>
     </ol>
     <ul>
         <li>
-            <p>Come back in: </p>
+            <div class="fifthcaption">
+                <p>Come back in: </p>
             <p id="day4"></p>
-        </li>
+            </div>
+</li>
     </ul>
-    <ol>
-        <li id="33" class="hide" src="https://cf.geekdo-images.com/images/pic909801_lg.jpg" alt="I'll just buy all the cheap garbage!">I'll just buy all the cheap garbage!</li>
-        <li id="34" class="hide" src="https://cf.geekdo-images.com/images/pic1365444.jpg" alt="This is a yellow card.">This is a yellow card.</li>
-        <li id="35" class="hide" src="https://cf.geekdo-images.com/images/pic1096936_lg.jpg" alt="All mine!">All mine!</li>
-        <li id="36" class="hide" src="https://cf.geekdo-images.com/images/pic1515094_lg.jpg" alt="Dig Dig Dig...">Dig Dig Dig...</li>
-        <li id="37" class="hide" src="https://cf.geekdo-images.com/images/pic475895_lg.jpg" alt="Animeeples">Animeeples</li>
-        <li id="38" class="hide" src="https://cf.geekdo-images.com/images/pic2465327_lg.jpg" alt="Sabotage? Who me?">Sabotage? Who me?</li>
-        <li id="39" class="hide" src="https://cf.geekdo-images.com/images/pic535127_lg.jpg" alt="Who said the art is weird?">Who said the art is weird?</li>
-        <li id="40" class="hide" src="https://cf.geekdo-images.com/images/pic1574282_lg.jpg" alt="Look a those dice!">Look a those dice!</li>
+    <ol class="split">
+        <li id="33" class="hide" src="https://cf.geekdo-images.com/images/pic909801_lg.jpg" alt="I'll just buy all the cheap garbage!"><div class="fifth">I'll just buy all the cheap garbage!</div></li>
+        <li id="34" class="hide" src="https://cf.geekdo-images.com/images/pic1365444.jpg" alt="This is a yellow card."><div class="fifth">This is a yellow card.</div></li>
+        <li id="35" class="hide" src="https://cf.geekdo-images.com/images/pic1096936_lg.jpg" alt="All mine!"><div class="fifth">All mine!</div></li>
+        <li id="36" class="hide" src="https://cf.geekdo-images.com/images/pic1515094_lg.jpg" alt="Dig Dig Dig..."><div class="fifth">Dig Dig Dig...</div></li>
+        <li id="37" class="hide" src="https://cf.geekdo-images.com/images/pic475895_lg.jpg" alt="Animeeples"><div class="fifth">Animeeples</div></li>
+        <li id="38" class="hide" src="https://cf.geekdo-images.com/images/pic2465327_lg.jpg" alt="Sabotage? Who me?"><div class="fifth">Sabotage? Who me?</div></li>
+        <li id="39" class="hide" src="https://cf.geekdo-images.com/images/pic535127_lg.jpg" alt="Who said the art is weird?"><div class="fifth">Who said the art is weird?</div></li>
+        <li id="40" class="hide" src="https://cf.geekdo-images.com/images/pic1574282_lg.jpg" alt="Look a those dice!"><div class="fifth">Look a those dice!</div></li>
     </ol>
-    </p>  
 <!-- The Modal -->
 <div id="myModal" class="modal">
 

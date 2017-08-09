@@ -78,6 +78,7 @@
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="puzzle.png" />
+    <Content Include="solveme.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
