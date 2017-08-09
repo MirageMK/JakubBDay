@@ -49,6 +49,15 @@
             pwa.document.close();
         }
 
+        function didyousolveme() {
+            var person = prompt("Please enter the code to get your prize");
+            if (person != null && person == "BIBI") {
+                window.location.replace("solveme.html");
+            } else {
+                document.getElementById("wrongcodelabel").innerHTML =
+     person + "??? That is wrong!!! Try again!";
+            }
+        }
     </script>
     <style>
         
@@ -80,6 +89,9 @@
                
         }
 
+        #wrongcodelabel {
+            color: red
+        }
 
         #myImg:hover {opacity: 0.7;}
 
@@ -423,7 +435,9 @@
    
 </script>
 <button onclick="PrintImage('puzzle.png'); return false;">Print</button>
-<button id="button" class="solveme"><a href="solveme.html">Did you solve me? </a></button>
+<!--<button id="button" class="solveme"><a href="solveme.html">Did you solve me? </a></button>-->
+<button onclick="didyousolveme()">Did you solve me?</button>
+<label id="wrongcodelabel"></label>
     <ul>
         <li>
             <p class="firstcaption">Challenge 1</p>
