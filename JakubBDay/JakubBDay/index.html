@@ -28,6 +28,12 @@
             $(".close").click(function () {
                 modal.hide();
             });
+
+            $(document).bind('keydown', function (e) {
+                if (e.which == 27) {
+                    modal.hide();
+                }
+            });
         });
 
         function ImagetoShow(source) {
