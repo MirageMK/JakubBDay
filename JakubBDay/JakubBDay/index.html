@@ -3,38 +3,36 @@
 <head>
     <meta charset="utf-8" />
     <title>Happy Birthday Jakub!!!</title>
-    <script
-        src="http://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script
-        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-        crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("button").button();
             // Get the modal
             var modal = $('#myModal');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-            $("li").click(function() {
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            $("li").click(function () {
                 modal.show();
                 console.log(this);
                 $("#img01").attr("src", $(this).attr("src"));
                 $("#caption").html($(this).attr("alt"));
             });
 
-// When the user clicks on <span> (x), close the modal
-            $(".close").click(function() {
+            // When the user clicks on <span> (x), close the modal
+            $(".close").click(function () {
                 modal.hide();
             });
         });
 
-        function ImagetoPrint(source) {
-            return "<html><head><style type='text/css' media='print'>"+
-                "@page { size: landscape; }"+
+        function ImagetoShow(source) {
+            return "<html><head><style type='text/css' media='print'>" +
+                "@page { size: landscape; }" +
                 "</style><script>function step1(){\n" +
                 "setTimeout('step2()', 10);}\n" +
                 "function step2(){window.print();window.close()}\n" +
@@ -45,13 +43,13 @@
             Pagelink = "about:blank";
             var pwa = window.open(Pagelink, "_new");
             pwa.document.open();
-            pwa.document.write(ImagetoPrint(source));
+            pwa.document.write(ImagetoShow(source));
             pwa.document.close();
         }
 
         function didyousolveme() {
             var person = prompt("Please enter the code to get your prize");
-            if (person != null && person == "BIBI") {
+            if (person != null && (person == "SSHTOINRAFUE" || person == "sshtoinrafue")) {
                 window.location.replace("solveme.html");
             } else {
                 document.getElementById("wrongcodelabel").innerHTML =
@@ -60,24 +58,18 @@
         }
     </script>
     <style>
-        
-         body {
-             /*background-image: url("jakub.jpg");*/
-             opacity: 0.8;
-         }
-
         /* Style the Image Used to Trigger the Modal */
         li {
             cursor: pointer;
             transition: 0.3s;
         }
 
-        .hide{
-            display:none;  
+        .hide {
+            display: none;
         }
 
-        .show{
-            display:inline;  
+        .show {
+            display: inline;
         }
 
         .title {
@@ -86,14 +78,15 @@
             text-align: center;
             font-size: 50px;
             font-family: Comic Sans MS;
-               
         }
 
         #wrongcodelabel {
-            color: red
+            color: red;
         }
 
-        #myImg:hover {opacity: 0.7;}
+        #myImg:hover {
+            opacity: 0.7;
+        }
 
         /* The Modal (background) */
         .modal {
@@ -111,120 +104,126 @@
         }
 
         ol li div, .first {
-  width: 100%;
-  height: 100%;
-  background-color: antiquewhite;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-}
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 20px;
+        }
 
 
-                ol li div, .firstcaption {
-  width: 100%;
-  height: 100%;
-  background-color: burlywood;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-  font-size: 30px;
-}
-                ol li div, .second {
-  width: 100%;
-  height: 100%;
-  background-color: darkkhaki;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-}
+        ol li div, .firstcaption {
+            width: 100%;
+            height: 100%;
+            background-color: burlywood;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 25px;
+        }
 
-                ol li div, .secondcaption {
-  width: 100%;
-  height: 100%;
-  background-color: olivedrab;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-  font-size: 30px;
-}
+        ol li div, .second {
+            width: 100%;
+            height: 100%;
+            background-color: darkkhaki;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 20px;
+        }
 
-                                ol li div, .thirdcaption {
-  width: 100%;
-  height: 100%;
-  background-color: lightcoral;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-  font-size: 30px;
-}
+        ol li div, .secondcaption {
+            width: 100%;
+            height: 100%;
+            background-color: olivedrab;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 25px;
+        }
 
-                  ol li div, .third {
-  width: 100%;
-  height: 100%;
-  background-color: darksalmon;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-}
+        ol li div, .thirdcaption {
+            width: 100%;
+            height: 100%;
+            background-color: lightcoral;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 25px;
+        }
 
-                  ol li div, .fourth {
-  width: 100%;
-  height: 100%;
-  background-color: powderblue;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-}
+        ol li div, .third {
+            width: 100%;
+            height: 100%;
+            background-color: darksalmon;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 20px;
+        }
 
- ol li div, .fourthcaption {
-  width: 100%;
-  height: 100%;
-  background-color: darkcyan;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-  font-size: 30px;
-}
+        ol li div, .fourth {
+            width: 100%;
+            height: 100%;
+            background-color: powderblue;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 20px;
+        }
 
-                                    ol li div, .fifth {
-  width: 100%;
-  height: 100%;
-  background-color: cadetblue;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-}
+        ol li div, .fourthcaption {
+            width: 100%;
+            height: 100%;
+            background-color: darkcyan;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        ol li div, .fifth {
+            width: 100%;
+            height: 100%;
+            background-color: plum;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 20px;
+        }
 
 
- ol li div, .fifthcaption {
-  width: 100%;
-  height: 100%;
-  background-color: darkslateblue;
-  margin-left: -20px;
-  padding-left: 20px;
-  font-weight: bold;
-  font-family: Comic Sans MS;
-  text-align: center;
-  font-size: 30px;
-}
+        ol li div, .fifthcaption {
+            width: 100%;
+            height: 100%;
+            background-color: darkslateblue;
+            margin-left: -20px;
+            padding-left: 20px;
+            font-weight: bold;
+            font-family: Comic Sans MS;
+            text-align: center;
+            font-size: 25px;
+        }
         /* Modal Content (Image) */
         .modal-content {
             margin: auto;
@@ -245,20 +244,25 @@
             height: 150px;
         }
 
-        ol.split { list-style-type: none; }
-    ol.split li:before
-    {
-      counter-increment: mycounter;
-      content: counter(mycounter) ".\00A0\00A0";
-    }
-    ol.split li
-    {
-      text-indent: -1.3em;
-    }
-    ol.start { counter-reset: mycounter; }
+        ol.split {
+            list-style-type: none;
+        }
+
+            ol.split li:before {
+                counter-increment: mycounter;
+                content: counter(mycounter) ".\00A0\00A0";
+            }
+
+            ol.split li {
+                text-indent: -1.3em;
+            }
+
+        ol.start {
+            counter-reset: mycounter;
+        }
 
         /* Add Animation - Zoom in the Modal */
-        .modal-content, #caption { 
+        .modal-content, #caption {
             -webkit-animation-name: zoom;
             -webkit-animation-duration: 0.6s;
             animation-name: zoom;
@@ -266,13 +270,23 @@
         }
 
         @-webkit-keyframes zoom {
-            from {-webkit-transform:scale(0)} 
-            to {-webkit-transform:scale(1)}
+            from {
+                -webkit-transform: scale(0);
+            }
+
+            to {
+                -webkit-transform: scale(1);
+            }
         }
 
         @keyframes zoom {
-            from {transform:scale(0)} 
-            to {transform:scale(1)}
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
         }
 
         /* The Close Button */
@@ -287,7 +301,7 @@
         }
 
         .solveme {
-            align-items: right
+            align-items: right;
         }
 
         .close:hover,
@@ -298,7 +312,7 @@
         }
 
         /* 100% Image Width on Smaller Screens */
-        @media only screen and (max-width: 700px){
+        @media only screen and (max-width: 700px) {
             .modal-content {
                 width: 100%;
             }
@@ -307,160 +321,160 @@
 </head>
 <body>
     <p class="title">
-            Welcome to
-            "Fun with board games"
+        Hello Jakub! Welcome to
+        "Fun with board games"
     </p>
-<img style="width: calc(100% - 100px); horiz-align: center" src="puzzle.png" />
-<br/>
-<script>
-// Set the date we're counting down to
-    var countDownDate1 = new Date("Aug 06, 2017 09:00:00").getTime();
-    var countDownDate2 = new Date("Aug 07, 2017 09:00:00").getTime();
-    var countDownDate3 = new Date("Aug 08, 2017 09:00:00").getTime();
-    var countDownDate4 = new Date("Aug 08, 2017 09:00:00").getTime();
+    <img style="width: calc(100% - 100px); horiz-align: center" src="puzzle.png" />
+    <br />
+    <script>
+        // Set the date we're counting down to
+        var countDownDate1 = new Date("Aug 09, 2017 15:36:00").getTime();
+        var countDownDate2 = new Date("Aug 09, 2017 15:37:00").getTime();
+        var countDownDate3 = new Date("Aug 10, 2017 09:00:00").getTime();
+        var countDownDate4 = new Date("Aug 11, 2017 09:00:00").getTime();
 
-// Update the count down every 1 second
-    var x = setInterval(function() {
+        // Update the count down every 1 second
+        var x = setInterval(function () {
 
-        // Get todays date and time
-        var now = new Date().getTime();
+            // Get todays date and time
+            var now = new Date().getTime();
 
-        // Find the distance between now an the count down date
+            // Find the distance between now an the count down date
 
-        var distance1 = countDownDate1 - now;
-        var distance2 = countDownDate2 - now;
-        var distance3 = countDownDate3 - now;
-        var distance4 = countDownDate4 - now;
+            var distance1 = countDownDate1 - now;
+            var distance2 = countDownDate2 - now;
+            var distance3 = countDownDate3 - now;
+            var distance4 = countDownDate4 - now;
 
-        // Time calculations for days, hours, minutes and seconds
-        var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
-        var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+            var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
 
-        var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
-        var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+            var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+            var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
 
-        var days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
-        var hours3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000);
+            var days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+            var hours3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000);
 
-        var days4 = Math.floor(distance4 / (1000 * 60 * 60 * 24));
-        var hours4 = Math.floor((distance4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes4 = Math.floor((distance4 % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds4 = Math.floor((distance4 % (1000 * 60)) / 1000);
+            var days4 = Math.floor(distance4 / (1000 * 60 * 60 * 24));
+            var hours4 = Math.floor((distance4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes4 = Math.floor((distance4 % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds4 = Math.floor((distance4 % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="demo"
-        document.getElementById("day1").innerHTML = days1 + "d " + hours1 + "h "
-            + minutes1 + "m " + seconds1 + "s ";
+            // Output the result in an element with id="demo"
+            document.getElementById("day1").innerHTML = days1 + "d " + hours1 + "h "
+                + minutes1 + "m " + seconds1 + "s ";
 
-        document.getElementById("day2").innerHTML = days2 + "d " + hours2 + "h "
-            + minutes2 + "m " + seconds2 + "s ";
+            document.getElementById("day2").innerHTML = days2 + "d " + hours2 + "h "
+                + minutes2 + "m " + seconds2 + "s ";
 
-        document.getElementById("day3").innerHTML = days3 + "d " + hours3 + "h "
-            + minutes3 + "m " + seconds3 + "s ";
+            document.getElementById("day3").innerHTML = days3 + "d " + hours3 + "h "
+                + minutes3 + "m " + seconds3 + "s ";
 
-        document.getElementById("day4").innerHTML = days4 + "d " + hours4 + "h "
-            + minutes4 + "m " + seconds4 + "s ";
+            document.getElementById("day4").innerHTML = days4 + "d " + hours4 + "h "
+                + minutes4 + "m " + seconds4 + "s ";
 
-        // If the count down is over, write some text
-        if (distance1 < 0) {
-            clearInterval(x);
-            document.getElementById("day1").innerHTML = "Challenge 2!";
-        }
+            // If the count down is over, write some text
+            if (distance1 < 0) {
+                clearInterval(x);
+                document.getElementById("day1").innerHTML = "Challenge 2!";
+            }
 
-        if (distance2 < 0) {
-            clearInterval(x);
-            document.getElementById("day2").innerHTML = "Challenge 3!";
-        }
+            if (distance2 < 0) {
+                clearInterval(x);
+                document.getElementById("day2").innerHTML = "Challenge 3!";
+            }
 
-        if (distance3 < 0) {
-            clearInterval(x);
-            document.getElementById("day3").innerHTML = "Challenge 4!";
-        }
+            if (distance3 < 0) {
+                clearInterval(x);
+                document.getElementById("day3").innerHTML = "Challenge 4!";
+            }
 
-        if (distance4 < 0) {
-            clearInterval(x);
-            document.getElementById("day4").innerHTML = "Challenge 5!";
-        }
-        
-        if (document.getElementById("day1").innerHTML == "Challenge 2!") {
-            document.getElementById("9").classList.remove('hide');
-            document.getElementById("10").classList.remove('hide');
-            document.getElementById("11").classList.remove('hide');
-            document.getElementById("12").classList.remove('hide');
-            document.getElementById("13").classList.remove('hide');
-            document.getElementById("14").classList.remove('hide');
-            document.getElementById("15").classList.remove('hide');
-            document.getElementById("16").classList.remove('hide');
-        }
+            if (distance4 < 0) {
+                clearInterval(x);
+                document.getElementById("day4").innerHTML = "Challenge 5!";
+            }
 
-        if (document.getElementById("day2").innerHTML == "Challenge 3!") {
-            document.getElementById("17").classList.remove('hide');
-            document.getElementById("18").classList.remove('hide');
-            document.getElementById("19").classList.remove('hide');
-            document.getElementById("20").classList.remove('hide');
-            document.getElementById("21").classList.remove('hide');
-            document.getElementById("22").classList.remove('hide');
-            document.getElementById("23").classList.remove('hide');
-            document.getElementById("24").classList.remove('hide');
-        }
+            if (document.getElementById("day1").innerHTML == "Challenge 2!") {
+                document.getElementById("9").classList.remove('hide');
+                document.getElementById("10").classList.remove('hide');
+                document.getElementById("11").classList.remove('hide');
+                document.getElementById("12").classList.remove('hide');
+                document.getElementById("13").classList.remove('hide');
+                document.getElementById("14").classList.remove('hide');
+                document.getElementById("15").classList.remove('hide');
+                document.getElementById("16").classList.remove('hide');
+            }
 
-        if (document.getElementById("day3").innerHTML == "Challenge 4!") {
-            document.getElementById("25").classList.remove('hide');
-            document.getElementById("26").classList.remove('hide');
-            document.getElementById("27").classList.remove('hide');
-            document.getElementById("28").classList.remove('hide');
-            document.getElementById("29").classList.remove('hide');
-            document.getElementById("30").classList.remove('hide');
-            document.getElementById("31").classList.remove('hide');
-            document.getElementById("32").classList.remove('hide');
-        }
+            if (document.getElementById("day2").innerHTML == "Challenge 3!") {
+                document.getElementById("17").classList.remove('hide');
+                document.getElementById("18").classList.remove('hide');
+                document.getElementById("19").classList.remove('hide');
+                document.getElementById("20").classList.remove('hide');
+                document.getElementById("21").classList.remove('hide');
+                document.getElementById("22").classList.remove('hide');
+                document.getElementById("23").classList.remove('hide');
+                document.getElementById("24").classList.remove('hide');
+            }
 
-        if (document.getElementById("day4").innerHTML == "Challenge 5!") {
-            document.getElementById("33").classList.remove('hide');
-            document.getElementById("34").classList.remove('hide');
-            document.getElementById("35").classList.remove('hide');
-            document.getElementById("36").classList.remove('hide');
-            document.getElementById("37").classList.remove('hide');
-            document.getElementById("38").classList.remove('hide');
-            document.getElementById("39").classList.remove('hide');
-            document.getElementById("40").classList.remove('hide');
-        }
-    }, 1000);
+            if (document.getElementById("day3").innerHTML == "Challenge 4!") {
+                document.getElementById("25").classList.remove('hide');
+                document.getElementById("26").classList.remove('hide');
+                document.getElementById("27").classList.remove('hide');
+                document.getElementById("28").classList.remove('hide');
+                document.getElementById("29").classList.remove('hide');
+                document.getElementById("30").classList.remove('hide');
+                document.getElementById("31").classList.remove('hide');
+                document.getElementById("32").classList.remove('hide');
+            }
 
-   
-</script>
-<button onclick="PrintImage('puzzle.png'); return false;">Print</button>
-<!--<button id="button" class="solveme"><a href="solveme.html">Did you solve me? </a></button>-->
-<button onclick="didyousolveme()">Did you solve me?</button>
-<label id="wrongcodelabel"></label>
-    <ul>
-        <li>
-            <p class="firstcaption">Challenge 1</p>
-        </li>
-    </ul>
-<ol class="split start">
-    <li id="1" src="https://cf.geekdo-images.com/images/pic438847_lg.jpg" alt="Zerg Rush!"><div class="first">Zerg Rush!</div></li>
-    <li id="2" src="https://cf.geekdo-images.com/images/pic1595066_lg.jpg" alt="Attack!"><div class="first">Attack!</div></li>
-    <li id="3" src="https://cf.geekdo-images.com/images/pic56604_lg.jpg" alt="The game with the hockey puck."><div class="first">The game with the hockey puck.</div></li>
-    <li id="4" src="https://cf.geekdo-images.com/images/pic105293.jpg" alt="Just one more into the castillo."><div class="first">Just one more into the castillo.</div></li>
-    <li id="5" src="https://cf.geekdo-images.com/images/pic244247_lg.jpg" alt="What harm will one little catapult do?"><div class="first">What harm will one little catapult do?</div></li>
-    <li id="6" src="https://cf.geekdo-images.com/images/pic459592_lg.jpg" alt="It's the love hut!"><div class="first">It's the love hut!</div></li>
-    <li id="7" src="https://cf.geekdo-images.com/images/pic795204_lg.jpg" alt="Do you have exact change?"><div class="first">Do you have exact change?</div></li>
-    <li id="8" src="https://cf.geekdo-images.com/images/pic713875_lg.jpg" alt="When do you usually get up in the morning?"><div class="first">When do you usually get up in the morning?</div></li>
-</ol>   
-<ul>
-    <li>
-        <div class="secondcaption">
+            if (document.getElementById("day4").innerHTML == "Challenge 5!") {
+                document.getElementById("33").classList.remove('hide');
+                document.getElementById("34").classList.remove('hide');
+                document.getElementById("35").classList.remove('hide');
+                document.getElementById("36").classList.remove('hide');
+                document.getElementById("37").classList.remove('hide');
+                document.getElementById("38").classList.remove('hide');
+                document.getElementById("39").classList.remove('hide');
+                document.getElementById("40").classList.remove('hide');
+            }
+        }, 1000);
+
+
+    </script>
+    <button onclick="PrintImage('puzzle.png'); return false;">Print</button>
+    <!--<button id="button" class="solveme"><a href="solveme.html">Did you solve me? </a></button>-->
+    <button onclick="didyousolveme()">Did you solve me?</button>
+    <label id="wrongcodelabel"></label>
+
+    <div>
+        <p class="firstcaption">Challenge 1</p>
+    </div>
+
+    <ol class="split start">
+        <li id="1" src="https://cf.geekdo-images.com/images/pic438847_lg.jpg" alt="Zerg Rush!"><div class="first">Zerg Rush!</div></li>
+        <li id="2" src="https://cf.geekdo-images.com/images/pic1595066_lg.jpg" alt="Attack!"><div class="first">Attack!</div></li>
+        <li id="3" src="https://cf.geekdo-images.com/images/pic56604_lg.jpg" alt="The game with the hockey puck."><div class="first">The game with the hockey puck.</div></li>
+        <li id="4" src="https://cf.geekdo-images.com/images/pic105293.jpg" alt="Just one more into the castillo."><div class="first">Just one more into the castillo.</div></li>
+        <li id="5" src="https://cf.geekdo-images.com/images/pic244247_lg.jpg" alt="What harm will one little catapult do?"><div class="first">What harm will one little catapult do?</div></li>
+        <li id="6" src="https://cf.geekdo-images.com/images/pic459592_lg.jpg" alt="It's the love hut!"><div class="first">It's the love hut!</div></li>
+        <li id="7" src="https://cf.geekdo-images.com/images/pic795204_lg.jpg" alt="Do you have exact change?"><div class="first">Do you have exact change?</div></li>
+        <li id="8" src="https://cf.geekdo-images.com/images/pic713875_lg.jpg" alt="When do you usually get up in the morning?"><div class="first">When do you usually get up in the morning?</div></li>
+    </ol>
+
+
+    <div class="secondcaption">
         <p>Come back in: </p>
         <p id="day1"></p>
-        </div>
-    </li>
-</ul>
+    </div>
+
+
     <ol class="split">
         <li id="9" class="hide" src="https://cf.geekdo-images.com/images/pic1178855_lg.jpg" alt="What's the worst that could happen?"><div class="second">What's the worst that could happen?</div></li>
         <li id="10" class="hide" src="https://cf.geekdo-images.com/images/pic258478.jpg" alt="Just one more Elephant!"><div class="second">Just one more Elephant!</div></li>
@@ -471,14 +485,12 @@
         <li id="15" class="hide" src="https://cf.geekdo-images.com/images/pic973020.jpg" alt="Please, not the sea serpent."><div class="second">Please, not the sea serpent.</div></li>
         <li id="16" class="hide" src="https://cf.geekdo-images.com/images/pic93199_lg.jpg" alt="Colonists... sure."><div class="second">Colonists... sure.</div></li>
     </ol>
-    <ul>
-        <li>
-            <div class="thirdcaption">
-                <p>Come back in: </p>
-                <p id="day2"></p>
-            </div>
-        </li>
-    </ul>
+
+    <div class="thirdcaption">
+        <p>Come back in: </p>
+        <p id="day2"></p>
+    </div>
+
     <ol class="split">
         <li id="17" class="hide" src="https://cf.geekdo-images.com/images/pic2036593_lg.jpg" alt="Keep your hands off my casino!"><div class="third">Keep your hands off my casino!</div></li>
         <li id="18" class="hide" src="https://cf.geekdo-images.com/images/pic1019800_lg.jpg" alt="You are a Cylon."><div class="third">You are a Cylon.</div></li>
@@ -489,14 +501,12 @@
         <li id="23" class="hide" src="https://cf.geekdo-images.com/images/pic434482_lg.jpg" alt="Who took all the lasers?"><div class="third">Who took all the lasers?</div></li>
         <li id="24" class="hide" src="https://cf.geekdo-images.com/images/pic1021253.jpg" alt="It's not that long! Cough, Cough!"><div class="third">It's not that long! Cough, Cough!</div></li>
     </ol>
-    <ul>
-        <li>
-            <div class="fourthcaption">
-                <p>Come back in: </p>
-            <p id="day3"></p>
-            </div>
-</li>
-    </ul>
+
+    <div class="fourthcaption">
+        <p>Come back in: </p>
+        <p id="day3"></p>
+    </div>
+
     <ol class="split">
         <li id="25" class="hide" src="https://cf.geekdo-images.com/images/pic292530_lg.jpg" alt="Military or Production?"><div class="fourth">Military or Production?</div></li>
         <li id="26" class="hide" src="https://cf.geekdo-images.com/images/pic1755785_lg.jpg" alt="Let's involve the natives."><div class="fourth">Let's involve the natives.</div></li>
@@ -507,14 +517,12 @@
         <li id="31" class="hide" src="https://cf.geekdo-images.com/images/pic927815_lg.jpg" alt="Beware the arachnids!"><div class="fourth">Beware the arachnids!</div></li>
         <li id="32" class="hide" src="https://cf.geekdo-images.com/images/pic178686_md.jpg" alt="But it seems so easy."><div class="fourth">But it seems so easy.</div></li>
     </ol>
-    <ul>
-        <li>
-            <div class="fifthcaption">
-                <p>Come back in: </p>
-            <p id="day4"></p>
-            </div>
-</li>
-    </ul>
+
+    <div class="fifthcaption">
+        <p>Come back in: </p>
+        <p id="day4"></p>
+    </div>
+
     <ol class="split">
         <li id="33" class="hide" src="https://cf.geekdo-images.com/images/pic909801_lg.jpg" alt="I'll just buy all the cheap garbage!"><div class="fifth">I'll just buy all the cheap garbage!</div></li>
         <li id="34" class="hide" src="https://cf.geekdo-images.com/images/pic1365444.jpg" alt="This is a yellow card."><div class="fifth">This is a yellow card.</div></li>
@@ -525,18 +533,17 @@
         <li id="39" class="hide" src="https://cf.geekdo-images.com/images/pic535127_lg.jpg" alt="Who said the art is weird?"><div class="fifth">Who said the art is weird?</div></li>
         <li id="40" class="hide" src="https://cf.geekdo-images.com/images/pic1574282_lg.jpg" alt="Look a those dice!"><div class="fifth">Look a those dice!</div></li>
     </ol>
-<!-- The Modal -->
-<div id="myModal" class="modal">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-    <!-- The Close Button -->
-    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+        <!-- The Close Button -->
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 
-    <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01">
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
 
-    <!-- Modal Caption (Image Text) -->
-    <div id="caption"></div>
-</div>
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
 </body>
 </html>
-
