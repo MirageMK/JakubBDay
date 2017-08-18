@@ -69,6 +69,7 @@
     <Content Include="final.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="final.png" />
     <Content Include="happybday.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
