@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="finaltip.html" />
     <Content Include="final.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -95,6 +96,7 @@
     </Content>
     <Content Include="final.html" />
     <Content Include="solveme.html" />
+    <Content Include="tip3.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
